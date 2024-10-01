@@ -1,0 +1,18 @@
+{
+  "name": "automation-test-wppool",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "CheckAllFunctionality": "npm run CheckSearchFunctionality && npm run CheckProductPurchaseFunctionality",
+    "CheckSearchFunctionality": "npx playwright test tests/test-cases/search_functionality.spec.js --workers=1 --project=chromium --headed",
+    "CheckProductPurchaseFunctionality": "npx playwright test tests/test-cases/product_purchase_functionalities.spec.js --workers=1 --project=chromium --headed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.47.2",
+    "@types/node": "^22.7.4"
+  }
+}
